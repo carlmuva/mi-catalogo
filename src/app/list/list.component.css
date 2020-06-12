@@ -1,0 +1,22 @@
+
+.container-list{
+    background-color:rgb(245, 242, 241);
+    margin-bottom: 5px;
+    justify-content: space-between;   
+    display:flex;
+    padding: 25px;
+    border-color: transparent;
+    border-bottom-left-radius: 10px;
+}
+
+#font-list{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.3 em;
+    text-align: center;
+}
+
+#ojo:active{
+    width: 20px;
+    cursor: pointer;
+    align-items: center;
+}
