@@ -2,12 +2,12 @@
     text-align: center;
     width: 100%;
     height: 90px;
-    background-color:lightblue;
+    background-color:rgb(245, 245, 245);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-style: solid;
-    border-color:mediumaquamarine;
+    border-color:rgb(216, 230, 225);
 }
 
 #LogoGG{
