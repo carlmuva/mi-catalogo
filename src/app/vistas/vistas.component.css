@@ -1,31 +1,28 @@
 
-.vistas{
-    display: flex;
-    justify-content: center;
-    padding-bottom: 5px;
+.GeneralPanel:hover{
+    text-decoration: underline;
+    background-color: rgb(231, 222, 222);
+    cursor:pointer;
 }
 
-#Lista{
-display: flex;
-justify-content: center;
-background-color:rgb(245, 245, 245);
-width: 50%;
-border-color: rgb(216, 230, 225);
-border-width: 4px;
-border-style: solid;
-}
-
-#Tabla{
-    display: flex;
-    justify-content: center;
-    background-color: rgb(245, 245, 245);
+.GeneralPanel{
+    background-color:rgb(216, 230, 225);
+    font-size: 12px;
+    text-align: center;
     width: 50%;
-    border-color:rgb(216, 230, 225);
-    border-width: 4px;
+    display: flex;
+    justify-content: center;
+}
+
+.LinkBarra{
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+    border:rgb(216, 230, 225);
     border-style: solid;
-
+    font-family: 'Open Sans', sans-serif;
+    font-size: 200%;
+    text-align: center;
 }
 
-section{
-    font-family: 'Press Start 2P', cursive;
-}
+
