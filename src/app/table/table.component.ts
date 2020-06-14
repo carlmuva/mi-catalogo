@@ -9,6 +9,8 @@ import { AutosService } from '../services/autos.service';
 })
 export class TableComponent implements OnInit {
   autos: Automovil[];
+  page=1;
+  pageSize=8;
   constructor(private autoService: AutosService) { }
 
   ngOnInit(): void {

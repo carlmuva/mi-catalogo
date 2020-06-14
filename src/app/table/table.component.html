@@ -1,3 +1,4 @@
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="autos.length"></ngb-pagination>
 <table class="table table-striped">
     <thead>
         <tr>
@@ -8,11 +9,15 @@
         </tr>
     </thead>
     <tbody>
-        <tr *ngFor="let auto of autos; index as i">
+        <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
             <th scope="row">{{ i + 1 }}</th>
             <td>{{ auto.marca }}</td>
             <td>{{ auto.submarca}}</td>
             <td>{{ auto.modelos}}</td>
+            <td><i class="fas fa-trash-alt fa-2x"></i></td>
+            <td><i class="fas fa-edit fa-2x"></i></td>
+            
         </tr>
     </tbody>
 </table>
+<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="autos.length"></ngb-pagination>

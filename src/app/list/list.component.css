@@ -15,7 +15,7 @@
     text-align: center;
 }
 
-#ojo:active{
+i:active{
     width: 20px;
     cursor: pointer;
     align-items: center;

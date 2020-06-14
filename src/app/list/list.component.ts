@@ -12,6 +12,9 @@ export class ListComponent implements OnInit {
   autos: Automovil[];
   SelecionarModalAuto:Automovil;
   closeResult="";
+  page=1;
+  pageSize=8;
+  
   constructor(private modalService: NgbModal, private autoService: AutosService) { }
   
 
