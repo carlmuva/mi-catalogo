@@ -1,5 +1,4 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
-<ngb-pagination [(page)]="page" [pageSize]="pageSize" [collectionSize]="autos.length"></ngb-pagination>
 <div *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
 
   <div class="container-list" id="font-list">
