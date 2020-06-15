@@ -10,6 +10,7 @@ import { VistasComponent } from './vistas/vistas.component';
 import { ListComponent } from './list/list.component';
 import { TableComponent } from './table/table.component';
 import { PageNotFoundComponentComponent } from './page-not-found-component/page-not-found-component.component';
+import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
     VistasComponent,
     ListComponent,
     TableComponent,
-    PageNotFoundComponentComponent
+    PageNotFoundComponentComponent,
+    ModalAddUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -28,6 +30,7 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
     HttpClientModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[ModalAddUpdateComponent]
 })
 export class AppModule { }

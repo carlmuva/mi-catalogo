@@ -9,12 +9,12 @@
     </thead>
     <tbody>
         <tr *ngFor="let auto of autos | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize; index as i">
-            <th scope="row">{{ i + 1 }}</th>
+            <th scope="row">{{auto._id}}</th>
             <td>{{ auto.marca }}</td>
             <td>{{ auto.submarca}}</td>
             <td>{{ auto.modelos}}</td>
             <td><i class="fas fa-trash-alt fa-2x"></i></td>
-            <td><i class="fas fa-edit fa-2x"></i></td>
+            <td (click)="openModalEditar(auto)"><i class="fas fa-edit fa-2x"></i></td>
             
         </tr>
     </tbody>
