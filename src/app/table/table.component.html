@@ -1,3 +1,7 @@
+<button type="button" class="btn btn-primary" (click)="openModalAgregar(NoAuto)">Agregar <i class="fas fa-plus"></i></button>
+
+
+
 <table class="table table-striped">
     <thead>
         <tr>
@@ -13,8 +17,8 @@
             <td>{{ auto.marca }}</td>
             <td>{{ auto.submarca}}</td>
             <td>{{ auto.modelos}}</td>
-            <td><i class="fas fa-trash-alt fa-2x"></i></td>
-            <td (click)="openModalEditar(auto)"><i class="fas fa-edit fa-2x"></i></td>
+            <td class="actions" (click)="openModalConfirmarEliminar(auto)"><i class="fas fa-trash-alt fa-2x"></i></td>
+            <td class="actions" (click)="openModalEditar(auto)"><i class="fas fa-edit fa-2x"></i></td>
             
         </tr>
     </tbody>
