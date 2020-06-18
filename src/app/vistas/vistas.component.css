@@ -1,28 +1,31 @@
 
-.GeneralPanel:hover{
-    text-decoration: underline;
+nav{
+    width: 33%;
+
+}
+.Barra:hover{
     background-color: rgb(231, 222, 222);
-    cursor:pointer;
 }
 
 .GeneralPanel{
+    height: 80%;
     background-color:rgb(216, 230, 225);
-    font-size: 12px;
     text-align: center;
-    width: 50%;
-    display: flex;
-    justify-content: center;
+    justify-content: space-around;
+    display:flex;
 }
 
-.LinkBarra{
+.Barra{
     width: 100%;
     height: 100%;
-    padding-bottom: 10px;
-    border:rgb(216, 230, 225);
-    border-style: solid;
     font-family: 'Open Sans', sans-serif;
-    font-size: 200%;
+    font-size: 30px;
     text-align: center;
+    cursor: pointer;
+    margin: 10px , 10px, 10px;
+    display: inline-block;
+
 }
+
 
 
