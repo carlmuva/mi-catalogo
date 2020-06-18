@@ -7,16 +7,26 @@ import { Automovil } from '../models';
   templateUrl: './modal-add-update.component.html',
   styleUrls: ['./modal-add-update.component.css']
 })
-export class ModalAddUpdateComponent implements OnInit {
+export class ModalAddUpdateComponent {
+
 
   constructor(public activeModal: NgbActiveModal) { }
 
   //Agregar o Editar
-  accion:string
+  accion: string
+  auto: Automovil;
+  desde:number;
+  hasta:number;
 
-  auto:Automovil;
 
-  ngOnInit(): void {
+
+  onSubmit() {
+    if (this.desde <= this.hasta) {
+      this.auto.modelos = [this.desde,this.hasta];
+      this.activeModal.close(this.auto);
+    } else {
+      this.activeModal.dismiss();
+    }
   }
 
 }

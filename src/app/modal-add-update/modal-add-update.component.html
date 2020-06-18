@@ -7,7 +7,7 @@
 </div>
 
 <div class="modal-body">
-    <form #formAutos= "ngForm">
+    <form #formAutos="ngForm" (submit)="onSubmit()">
         <div class="form-group">
             <label for="formGroupExampleInput">Marca</label>
             <input type="text" class="form-control" id="marca" placeholder="Agregar la marca" [(ngModel)]="auto.marca"
@@ -26,13 +26,32 @@
                 [(ngModel)]="auto.descripcion" name="descripcion">
         </div>
 
-        <div class="form-group">
+        <!--<div class="form-group">
             <label for="formGroupExampleInput">Modelo</label>
             <input type="text"  class="form-control" id="modelo" placeholder="Agregar el modelo"
                 [(ngModel)]="auto.modelos" name="modelos">
+        </div>-->
+        <div class="form-group">
+            <label for="formControlRange"><b>Modelos</b></label>
+            <div style="justify-content: space-between;">
+                <label>Desde</label>
+                <div style="display: flex;">
+                    <input type="range" class="form-control-range" min="2000" max="2020" [(ngModel)]="desde"
+                        name="modelos">
+                    <span>{{desde}}</span>
+                </div>
+                <label>Hasta</label>
+                <div style="display: flex;">
+                    <input type="range" class="form-control-range" min="2000" max="2020" [(ngModel)]="hasta"
+                        name="modelos">
+                    <samp>{{hasta}}</samp>
+                </div>
+            </div>
+            <div *ngIf="desde > hasta" class="alert alert-danger"> Rango incorrecto </div>
         </div>
+
         <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-dark" (click)="activeModal.close(auto)">Guardar</button>
+            <button type="submit" class="btn btn-outline-dark">Guardar</button>
         </div>
 
 
