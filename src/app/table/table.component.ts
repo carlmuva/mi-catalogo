@@ -16,11 +16,18 @@ export class TableComponent implements OnInit {
   page=1;
   pageSize=10;
   NoAuto: Automovil={} as Automovil;
+
+  displayProgressBar: boolean;
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
 
   ngOnInit(): void {
+    this.displayProgressBar=true;
     this.autoService.getAutos().subscribe((response)=>{
+      setTimeout(() =>{
+      this.displayProgressBar= false;
       this.autos=response.data;
+      },1500)
+
     })
   }
 
