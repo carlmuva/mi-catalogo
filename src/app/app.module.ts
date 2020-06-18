@@ -13,6 +13,7 @@ import { PageNotFoundComponentComponent } from './page-not-found-component/page-
 import { ModalAddUpdateComponent } from './modal-add-update/modal-add-update.component';
 import { FormsModule } from '@angular/forms';
 import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confirm-action.component';
+import { ForbiddenNameDirective } from './directives/forbidden-name.directive';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ModalConfirmActionComponent } from './modal-confirm-action/modal-confir
     TableComponent,
     PageNotFoundComponentComponent,
     ModalAddUpdateComponent,
-    ModalConfirmActionComponent
+    ModalConfirmActionComponent,
+    ForbiddenNameDirective
   ],
   imports: [
     BrowserModule,

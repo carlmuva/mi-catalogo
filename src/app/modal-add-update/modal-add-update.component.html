@@ -11,14 +11,31 @@
         <div class="form-group">
             <label for="formGroupExampleInput">Marca</label>
             <input type="text" class="form-control" id="marca" placeholder="Agregar la marca" [(ngModel)]="auto.marca"
-                name="marca">
+                name="marca" required minlength="4" #marca="ngModel">
         </div>
+        <div *ngIf="marca.invalid && (marca.dirty || marca.touched)">
+            <div *ngIf="marca.errors.minlength" class="alert alert-danger">La marca debe tener un minimo de 4 caracteres</div>
+            <div *ngIf="marca.errors.required"  class="alert alert-danger">La marca es requerida</div>
+        </div>
+
+        <!--<div [hiden]="marca.valid || marca.pristine" class="alert alert-danger">
+            La marca es requerida
+        </div>-->
 
         <div class="form-group">
             <label for="formGroupExampleInput">Submarca</label>
             <input type="text" class="form-control" id="submarca" placeholder="Agregar la submarca"
-                [(ngModel)]="auto.submarca" name="submarca">
+                [(ngModel)]="auto.submarca" name="submarca" required minlength="4" #submarca="ngModel">
         </div>
+
+        <div *ngIf="submarca.invalid && (submarca.dirty || submarca.touched)">
+            <div *ngIf="submarca.errors.minlength"  class="alert alert-danger">La submarca debe tener un minimo de 4 caracteres</div>
+            <div *ngIf="submarca.errors.required"  class="alert alert-danger">La submarca es requerida</div>
+        </div>
+
+        <!--<div [hiden]="submarca.valid || submarca.pristine" class="alert alert-danger">
+            La submarca es requerida
+        </div>-->
 
         <div class="form-group">
             <label for="formGroupExampleInput">Descripcion</label>
@@ -51,7 +68,7 @@
         </div>
 
         <div class="modal-footer">
-            <button type="submit" class="btn btn-outline-dark">Guardar</button>
+            <button type="submit" class="btn btn-outline-dark" [disabled]="!formAutos.form.valid">Guardar</button>
         </div>
 
 
