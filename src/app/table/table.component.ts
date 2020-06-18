@@ -16,6 +16,7 @@ export class TableComponent implements OnInit {
   page;
   pageSize;
   NoAuto: Automovil={} as Automovil;
+  searchText;
 
   displayProgressBar: boolean;
   constructor(private autoService: AutosService, private modalService: NgbModal) { }
